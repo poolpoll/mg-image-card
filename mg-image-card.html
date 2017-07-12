@@ -1,0 +1,134 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="mg-image-card">
+	<template>
+		<style>
+			.container {
+				display: flex;
+				flex-direction: column;
+				border-style: solid;
+				border-width: 1px;
+				border-color: #B7B9B8;
+				border-radius: 3%;
+			}
+			.header {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.profile-img {
+				width: 10vw;
+				height: 10vw;
+				border-radius: 100%;
+				padding: 3%;
+			}
+			.username {
+				color: #32B7B0;
+				font-weight: bold;
+			}
+			.main-img {
+				height: 33vh;
+				overflow: hidden;
+			}
+			.thumnail {
+				max-width: 100%;
+			}
+			.title {
+				font-weight: bold;
+				padding: 2vh 2vh 1vh 2vh;
+				font-size: 3vh;
+			}
+			.content {
+				color: #848486;
+				margin: 1vh 2vh 2vh 2vh;
+				height: 20vh;
+				overflow: hidden;
+			}
+			.icons {
+				display: flex;
+				flex-direction: row;
+				border-width: 1px 0 0 0;
+				border-style: solid;
+				border-color: #848486;
+				padding-top: 3%;
+				margin: 0 3% 3% 3%;
+			}
+			.icons div {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				align-items: center;
+			}
+			.icons img {
+				padding-left: 5%;
+				width: 6vw;
+				height: 6vw;
+			}
+			.icons span {
+				width: 100%;
+				text-align: center;
+			}
+			.attender {
+				border-style: solid;
+				border-color: #848486;				
+				border-width: 0 1px 0 1px;
+			}
+		</style>
+		<div class="container">
+			<div class="header">
+				<img class="profile-img" src="[[imageSrc]]">
+				<span class="username">dahyun01</span>
+			</div>
+
+			<div class="main-img">
+				<img class="thumnail" src="[[imageSrc]]">
+			</div>
+
+			<div class="detail">
+				<div class="title">
+					[[title]]
+				</div>
+				<div class="content">
+					[[content]]
+				</div>
+
+				<div class="icons">
+					<div class="like">
+						<img src="./images/like-icon.png">
+						<span>724</span>
+					</div>
+					<div class="attender">
+						<img src="./images/attender-icon.png">
+						<span>1.4 k</span>
+					</div>
+					<div class="reply">
+						<img src="./images/reply-icon.png">
+						<span>123</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<script>
+		Polymer({
+			is: 'mg-image-card',
+
+			properties: {
+				imageSrc: {
+					type: String,
+					value: 'http://lorempixel.com/600/400'
+				},
+
+				title: {
+					type: String,
+					value: '안철수, 그가 앞으로 나아가야할 방향은?'
+				},
+
+				content: {
+					type: String,
+					value: '대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다. 대선조작 사건의 가장 큰 연류자 안철수 전 국민의 당 대표가 아직도 입장표명을 하지 않고 있다.'
+				}
+			}
+		})
+	</script>
+</dom-module>
